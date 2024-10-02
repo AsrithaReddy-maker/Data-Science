@@ -3,7 +3,7 @@ from pycaret.classification import predict_model, load_model
 
 def load_data(filepath):
     """
-    Loads diabetes data into a DataFrame from a string filepath.
+    Loads churn data into a DataFrame from a string filepath.
     """
     df = pd.read_csv('prepped_churn_data.csv', index_col='customerID')
     return df
@@ -19,7 +19,7 @@ def make_predictions(df):
     # Check the column names
     print(predictions.columns)
     
-    # Rename 'prediction_label' to 'Diabetes_prediction' if it exists
+    # Rename 'prediction_label' to 'Churn_prediction' if it exists
     if 'prediction_label' in predictions.columns:
         predictions.rename(columns={'prediction_label': 'Churn_prediction'}, inplace=True)
         
