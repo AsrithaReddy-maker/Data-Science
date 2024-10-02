@@ -32,7 +32,7 @@ def make_predictions(df):
 
 
 if __name__ == "__main__":
-    df = load_data('prepped_churn_data.csv')
+    df = load_data('new_churn_data.csv')
     predictions = make_predictions(df)
     print('predictions:')
     print(predictions)
